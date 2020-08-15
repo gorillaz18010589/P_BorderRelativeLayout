@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:br="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            >
+            <!--第一行-->
+            <com.example.p_rlue_tableview.BorderRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:gravity="center_vertical"
+                br:borderBottomLeftBreakSize="16dp"
+                br:borderBottomRightBreakSize="16dp"
+
+                br:borderColor="#eeeeee"
+                br:borderStrokeWidth="3.0"
+                >
+
+                <TextView
+                    android:id="@+id/tv_balance_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="第一行"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_ia_prompt"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/tv_balance_txt"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_balance_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="#333333"
+                    android:text="第一行内容"
+                    android:textSize="12sp"
+                    />
+            </com.example.p_rlue_tableview.BorderRelativeLayout>
+            <!--第二行-->
+            <com.example.p_rlue_tableview.BorderRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:gravity="center_vertical"
+                br:borderColor="#eeeeee"
+                br:borderStrokeWidth="100.0"
+                br:needTopBorder="false"
+                br:needRightBorder="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:text="第二行"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="第二行内容"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    />
+            </com.example.p_rlue_tableview.BorderRelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
